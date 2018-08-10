@@ -28,25 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnFlight = new System.Windows.Forms.Button();
+            this.BtnTime = new System.Windows.Forms.Button();
+            this.LstPossible = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnFlight
             // 
-            this.button1.Location = new System.Drawing.Point(109, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnFlight.Location = new System.Drawing.Point(205, 12);
+            this.BtnFlight.Name = "BtnFlight";
+            this.BtnFlight.Size = new System.Drawing.Size(106, 23);
+            this.BtnFlight.TabIndex = 0;
+            this.BtnFlight.Text = "Add Flight";
+            this.BtnFlight.UseVisualStyleBackColor = true;
+            this.BtnFlight.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnTime
+            // 
+            this.BtnTime.Location = new System.Drawing.Point(12, 12);
+            this.BtnTime.Name = "BtnTime";
+            this.BtnTime.Size = new System.Drawing.Size(106, 23);
+            this.BtnTime.TabIndex = 1;
+            this.BtnTime.Text = "Set timeframe";
+            this.BtnTime.UseVisualStyleBackColor = true;
+            // 
+            // LstPossible
+            // 
+            this.LstPossible.FormattingEnabled = true;
+            this.LstPossible.ItemHeight = 16;
+            this.LstPossible.Location = new System.Drawing.Point(12, 41);
+            this.LstPossible.Name = "LstPossible";
+            this.LstPossible.Size = new System.Drawing.Size(299, 340);
+            this.LstPossible.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(323, 389);
+            this.Controls.Add(this.LstPossible);
+            this.Controls.Add(this.BtnTime);
+            this.Controls.Add(this.BtnFlight);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -55,7 +77,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnFlight;
+        private System.Windows.Forms.Button BtnTime;
+        private System.Windows.Forms.ListBox LstPossible;
     }
 }
 
