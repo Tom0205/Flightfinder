@@ -1,6 +1,6 @@
 ﻿namespace Flightfinder
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.BtnFlight.TabIndex = 0;
             this.BtnFlight.Text = "Add Flight";
             this.BtnFlight.UseVisualStyleBackColor = true;
-            this.BtnFlight.Click += new System.EventHandler(this.button1_Click);
+            this.BtnFlight.Click += new System.EventHandler(this.BtnFlight_Click);
             // 
             // BtnTime
             // 
@@ -61,7 +61,7 @@
             this.LstPossible.Size = new System.Drawing.Size(299, 340);
             this.LstPossible.TabIndex = 2;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +69,7 @@
             this.Controls.Add(this.LstPossible);
             this.Controls.Add(this.BtnTime);
             this.Controls.Add(this.BtnFlight);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
             this.ResumeLayout(false);
 

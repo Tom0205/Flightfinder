@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Flightfinder
 {
-    public partial class Form1 : Form
+    public partial class AddFlight : Form
     {
-        public Form1()
+        public AddFlight()
         {
             InitializeComponent();
-            //hello
+            DurationPicker.CustomFormat = DateTime.Now.ToString("HH:mm");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void DurationPicker_MouseDown(object sender, MouseEventArgs e)
         {
-
+            DurationPicker.CustomFormat = "HH:mm";
         }
     }
 }
