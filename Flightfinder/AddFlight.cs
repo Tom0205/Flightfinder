@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MySql.Data;
+using System.Diagnostics;
 
 namespace Flightfinder
 {
@@ -15,12 +18,74 @@ namespace Flightfinder
         public AddFlight()
         {
             InitializeComponent();
-            DurationPicker.CustomFormat = DateTime.Now.ToString("HH:mm");
+            DtpFlighttime.CustomFormat = DateTime.Now.ToString("HH:mm");
+        }
+        public string ConnectionString;
+        public MySqlConnection connection;
+
+        private void DtpFlighttime_MouseDown(object sender, MouseEventArgs e)
+        {
+            DtpFlighttime.CustomFormat = "HH:mm";
         }
 
-        private void DurationPicker_MouseDown(object sender, MouseEventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            DurationPicker.CustomFormat = "HH:mm";
+            Startup();
+            Opslaan();
+        }
+        private void Startup()
+        {
+            string server = "db4free.net";
+            string database = "flightfinder";
+            string uid = "tom0205";
+            string password = "Tom02052001";
+            
+            ConnectionString = "SERVER=" + server + "; DATABASE=" + database + "; UID=" + uid + "; PASSWORD=" + password + "; old guids=true; CharSet=utf8;";
+            connection = new MySqlConnection(ConnectionString);
+        }
+        private bool Openconnection()
+        {
+            //open connectie
+            try
+            {
+                connection.Open();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        private bool Closeconnection()
+        {
+            //close connectie
+            try
+            {
+                connection.Close();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        private void Opslaan()
+        {
+            if (this.Openconnection() == true)
+            {
+                //insert flightdata into database
+                string query = "INSERT INTO flightfinder.Flightinfo (Departure, Arrival, Callsign, Registration, Flighttime) VALUES ('" + TxtDeparture.Text + "', '" + TxtArrival.Text + "', '" + TxtCallsign.Text + "', '" + TxtRegistration.Text + "', '" + DtpFlighttime.Value.TimeOfDay + "')";
+                MySqlCommand Insert = new MySqlCommand(query, connection);
+                Insert.ExecuteNonQuery();
+                MessageBox.Show("Inserted");
+            }
+            else
+            {
+                MessageBox.Show("failed");
+            }
+        this.Closeconnection();
         }
     }
 }

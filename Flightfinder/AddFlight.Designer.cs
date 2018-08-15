@@ -28,21 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtDeparture = new System.Windows.Forms.TextBox();
             this.BtnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.DurationPicker = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DtpFlighttime = new System.Windows.Forms.DateTimePicker();
+            this.TxtArrival = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtCallsign = new System.Windows.Forms.TextBox();
+            this.TxtRegistration = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TxtDeparture
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.TxtDeparture.Location = new System.Drawing.Point(103, 12);
+            this.TxtDeparture.Name = "TxtDeparture";
+            this.TxtDeparture.Size = new System.Drawing.Size(100, 22);
+            this.TxtDeparture.TabIndex = 0;
             // 
             // BtnSave
             // 
@@ -52,6 +56,7 @@
             this.BtnSave.TabIndex = 1;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label1
             // 
@@ -71,45 +76,81 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Arrival";
             // 
-            // DurationPicker
+            // DtpFlighttime
             // 
-            this.DurationPicker.CustomFormat = "00:00";
-            this.DurationPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DurationPicker.Location = new System.Drawing.Point(103, 68);
-            this.DurationPicker.Name = "DurationPicker";
-            this.DurationPicker.ShowUpDown = true;
-            this.DurationPicker.Size = new System.Drawing.Size(100, 22);
-            this.DurationPicker.TabIndex = 4;
-            this.DurationPicker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DurationPicker_MouseDown);
+            this.DtpFlighttime.CustomFormat = "00:00";
+            this.DtpFlighttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpFlighttime.Location = new System.Drawing.Point(103, 124);
+            this.DtpFlighttime.Name = "DtpFlighttime";
+            this.DtpFlighttime.ShowUpDown = true;
+            this.DtpFlighttime.Size = new System.Drawing.Size(100, 22);
+            this.DtpFlighttime.TabIndex = 4;
+            this.DtpFlighttime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DtpFlighttime_MouseDown);
             // 
-            // textBox2
+            // TxtArrival
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
+            this.TxtArrival.Location = new System.Drawing.Point(103, 40);
+            this.TxtArrival.Name = "TxtArrival";
+            this.TxtArrival.Size = new System.Drawing.Size(100, 22);
+            this.TxtArrival.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 73);
+            this.label3.Location = new System.Drawing.Point(14, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Flight time";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Callsign";
+            // 
+            // TxtCallsign
+            // 
+            this.TxtCallsign.Location = new System.Drawing.Point(103, 68);
+            this.TxtCallsign.Name = "TxtCallsign";
+            this.TxtCallsign.Size = new System.Drawing.Size(100, 22);
+            this.TxtCallsign.TabIndex = 8;
+            // 
+            // TxtRegistration
+            // 
+            this.TxtRegistration.Location = new System.Drawing.Point(103, 96);
+            this.TxtRegistration.Name = "TxtRegistration";
+            this.TxtRegistration.Size = new System.Drawing.Size(100, 22);
+            this.TxtRegistration.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Registration";
             // 
             // AddFlight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TxtRegistration);
+            this.Controls.Add(this.TxtCallsign);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.DurationPicker);
+            this.Controls.Add(this.TxtArrival);
+            this.Controls.Add(this.DtpFlighttime);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtDeparture);
             this.Name = "AddFlight";
             this.Text = "AddFlight";
             this.ResumeLayout(false);
@@ -119,12 +160,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtDeparture;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker DurationPicker;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker DtpFlighttime;
+        private System.Windows.Forms.TextBox TxtArrival;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtCallsign;
+        private System.Windows.Forms.TextBox TxtRegistration;
+        private System.Windows.Forms.Label label5;
     }
 }

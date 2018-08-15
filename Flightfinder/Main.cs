@@ -22,6 +22,8 @@ namespace Flightfinder
             //open the add flight menu
             AddFlight addflightform = new AddFlight();
             addflightform.Show();
+            
         }
+        
     }
 }
