@@ -16,14 +16,25 @@ namespace Flightfinder
         {
             InitializeComponent();
         }
-
+        public string timeframe;
+        public string Dateframe;
+        AddFlight addflightform = new AddFlight();
         private void BtnFlight_Click(object sender, EventArgs e)
         {
             //open the add flight menu
-            AddFlight addflightform = new AddFlight();
-            addflightform.Show();
-            
+            addflightform.Show();          
         }
-        
+
+        private void BtnTime_Click(object sender, EventArgs e)
+        {
+            //open the settimeframe form
+            SetTimeFrame settimeframeform = new SetTimeFrame(this);
+            settimeframeform.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Dateframe.ToString() + " " +timeframe.ToString("HH:mm"));
+        }
     }
 }
