@@ -31,7 +31,7 @@
             this.BtnFlight = new System.Windows.Forms.Button();
             this.BtnTime = new System.Windows.Forms.Button();
             this.LstPossible = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LblTimeframe = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnFlight
@@ -62,29 +62,30 @@
             this.LstPossible.Name = "LstPossible";
             this.LstPossible.Size = new System.Drawing.Size(299, 340);
             this.LstPossible.TabIndex = 2;
+            this.LstPossible.DoubleClick += new System.EventHandler(this.LstPossible_DoubleClick);
             // 
-            // button1
+            // LblTimeframe
             // 
-            this.button1.Location = new System.Drawing.Point(12, 386);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LblTimeframe.AutoSize = true;
+            this.LblTimeframe.Location = new System.Drawing.Point(9, 384);
+            this.LblTimeframe.Name = "LblTimeframe";
+            this.LblTimeframe.Size = new System.Drawing.Size(152, 17);
+            this.LblTimeframe.TabIndex = 4;
+            this.LblTimeframe.Text = "Current set timeframe: ";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 421);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LblTimeframe);
             this.Controls.Add(this.LstPossible);
             this.Controls.Add(this.BtnTime);
             this.Controls.Add(this.BtnFlight);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Main";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,7 +94,7 @@
         private System.Windows.Forms.Button BtnFlight;
         private System.Windows.Forms.Button BtnTime;
         private System.Windows.Forms.ListBox LstPossible;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label LblTimeframe;
     }
 }
 

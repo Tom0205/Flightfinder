@@ -16,18 +16,17 @@ namespace Flightfinder
         {
             Mainform = incomingForm;
             InitializeComponent();
-            DtpTimeframeTime.CustomFormat = DateTime.Now.ToString("HH:mm");
+            DtpTimeframeTime.Format = DateTimePickerFormat.Custom;
+            DtpTimeframeTime.CustomFormat = "dd/MM/yyyy HH:mm";
         }
         Main Mainform;
-        private void DtpFlighttime_MouseDown(object sender, MouseEventArgs e)
-        {
-            DtpTimeframeTime.CustomFormat = "HH:mm";
-        }
-
         private void BtnSetframe_Click(object sender, EventArgs e)
         {
-            Mainform.timeframe = DtpTimeframeTime.Value.TimeOfDay.ToString();
-            Mainform.Dateframe = DtpTimeframeDate.Value.Date.ToString("dd/MM/yyyy");
+            //here the timeframe will be set to the variable and the 2 needed function will be called
+            Mainform.timeframe = DtpTimeframeTime.Value;
+            Mainform.PopulateLabel();
+            Mainform.SearchFlights();
+            this.Close();
         }
     }
 }
