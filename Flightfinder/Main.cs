@@ -27,6 +27,7 @@ namespace Flightfinder
         public string Callsign;
         public string Registration;
         public string Flighttime;
+
         private void BtnFlight_Click(object sender, EventArgs e)
         {
             //open the add flight menu

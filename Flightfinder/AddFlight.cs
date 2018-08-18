@@ -73,7 +73,7 @@ namespace Flightfinder
         }
         private void Opslaan()
         {
-            if (this.Openconnection() == true)
+            if (this.Openconnection() == true && TxtArrival.Text != "" && TxtCallsign.Text != "" && TxtDeparture.Text != "" && TxtRegistration.Text != "")
             {
                 //insert flightdata into database
                 string query = "INSERT INTO flightfinder.Flightinfo (Departure, Arrival, Callsign, Registration, Flighttime) VALUES ('" + TxtDeparture.Text + "', '" + TxtArrival.Text + "', '" + TxtCallsign.Text + "', '" + TxtRegistration.Text + "', '" + DtpFlighttime.Value.TimeOfDay + "')";
@@ -86,6 +86,13 @@ namespace Flightfinder
                 MessageBox.Show("failed");
             }
         this.Closeconnection();
+        }
+
+        private void AddFlight_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+            this.Parent = null;
         }
     }
 }
