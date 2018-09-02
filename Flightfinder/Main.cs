@@ -78,7 +78,7 @@ namespace Flightfinder
             dbCommand.Dispose();
             dbCommand = null;
         }   
-        private void Startup()
+        public void Startup()
         {
             string server = "db4free.net";
             string database = "flightfinder";
@@ -88,7 +88,7 @@ namespace Flightfinder
             ConnectionString = "SERVER=" + server + "; DATABASE=" + database + "; UID=" + uid + "; PASSWORD=" + password + "; old guids=true; CharSet=utf8;";
             connection = new MySqlConnection(ConnectionString);
         }
-        private bool Openconnection()
+        public bool Openconnection()
         {
             //open connectie
             try
@@ -102,7 +102,7 @@ namespace Flightfinder
                 return false;
             }
         }
-        private bool Closeconnection()
+        public bool Closeconnection()
         {
             //close connectie
             try
