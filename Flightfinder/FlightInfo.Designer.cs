@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightInfo));
             this.label5 = new System.Windows.Forms.Label();
             this.TxtRegistration = new System.Windows.Forms.TextBox();
             this.TxtCallsign = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@
             // 
             this.TxtRegistration.Enabled = false;
             this.TxtRegistration.Location = new System.Drawing.Point(81, 79);
-            this.TxtRegistration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.TxtRegistration.Name = "TxtRegistration";
             this.TxtRegistration.Size = new System.Drawing.Size(76, 20);
             this.TxtRegistration.TabIndex = 19;
@@ -64,7 +65,7 @@
             // 
             this.TxtCallsign.Enabled = false;
             this.TxtCallsign.Location = new System.Drawing.Point(81, 56);
-            this.TxtCallsign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCallsign.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCallsign.Name = "TxtCallsign";
             this.TxtCallsign.Size = new System.Drawing.Size(76, 20);
             this.TxtCallsign.TabIndex = 18;
@@ -93,7 +94,7 @@
             // 
             this.TxtArrival.Enabled = false;
             this.TxtArrival.Location = new System.Drawing.Point(81, 33);
-            this.TxtArrival.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtArrival.Margin = new System.Windows.Forms.Padding(2);
             this.TxtArrival.Name = "TxtArrival";
             this.TxtArrival.Size = new System.Drawing.Size(76, 20);
             this.TxtArrival.TabIndex = 15;
@@ -104,7 +105,7 @@
             this.DtpFlighttime.Enabled = false;
             this.DtpFlighttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpFlighttime.Location = new System.Drawing.Point(81, 102);
-            this.DtpFlighttime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpFlighttime.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFlighttime.Name = "DtpFlighttime";
             this.DtpFlighttime.ShowUpDown = true;
             this.DtpFlighttime.Size = new System.Drawing.Size(76, 20);
@@ -134,7 +135,7 @@
             // 
             this.TxtDeparture.Enabled = false;
             this.TxtDeparture.Location = new System.Drawing.Point(81, 11);
-            this.TxtDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDeparture.Margin = new System.Windows.Forms.Padding(2);
             this.TxtDeparture.Name = "TxtDeparture";
             this.TxtDeparture.Size = new System.Drawing.Size(76, 20);
             this.TxtDeparture.TabIndex = 11;
@@ -142,7 +143,7 @@
             // BtnVerwijder
             // 
             this.BtnVerwijder.Location = new System.Drawing.Point(134, 126);
-            this.BtnVerwijder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnVerwijder.Margin = new System.Windows.Forms.Padding(2);
             this.BtnVerwijder.Name = "BtnVerwijder";
             this.BtnVerwijder.Size = new System.Drawing.Size(62, 19);
             this.BtnVerwijder.TabIndex = 21;
@@ -166,7 +167,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtDeparture);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FlightInfo";
             this.Text = "FlightInfo";
             this.Load += new System.EventHandler(this.FlightInfo_Load);

@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetTimeFrame));
             this.BtnSetframe = new System.Windows.Forms.Button();
             this.DtpTimeframeTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // BtnSetframe
             // 
-            this.BtnSetframe.Location = new System.Drawing.Point(233, 19);
+            this.BtnSetframe.Location = new System.Drawing.Point(175, 15);
+            this.BtnSetframe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSetframe.Name = "BtnSetframe";
-            this.BtnSetframe.Size = new System.Drawing.Size(85, 26);
+            this.BtnSetframe.Size = new System.Drawing.Size(64, 21);
             this.BtnSetframe.TabIndex = 0;
             this.BtnSetframe.Text = "Set time frame";
             this.BtnSetframe.UseVisualStyleBackColor = true;
@@ -46,19 +48,22 @@
             // 
             this.DtpTimeframeTime.CustomFormat = "00:00";
             this.DtpTimeframeTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpTimeframeTime.Location = new System.Drawing.Point(27, 19);
+            this.DtpTimeframeTime.Location = new System.Drawing.Point(20, 15);
+            this.DtpTimeframeTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpTimeframeTime.Name = "DtpTimeframeTime";
             this.DtpTimeframeTime.ShowUpDown = true;
-            this.DtpTimeframeTime.Size = new System.Drawing.Size(200, 22);
+            this.DtpTimeframeTime.Size = new System.Drawing.Size(151, 20);
             this.DtpTimeframeTime.TabIndex = 5;
             // 
             // SetTimeFrame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 59);
+            this.ClientSize = new System.Drawing.Size(258, 48);
             this.Controls.Add(this.DtpTimeframeTime);
             this.Controls.Add(this.BtnSetframe);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SetTimeFrame";
             this.Text = "SetTimeFrame";
             this.ResumeLayout(false);
