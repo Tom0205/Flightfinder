@@ -28,5 +28,10 @@ namespace Flightfinder
             TxtRegistration.Text = mainform.Registration;
             DtpFlighttime.CustomFormat = mainform.Flighttime;
         }
+
+        private void BtnVerwijder_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM `Flightinfo` WHERE Departure = '" + mainform.Departure + "' AND Arrival = '" + mainform.Arrival + "' AND Callsign = '" + mainform.Callsign + "' AND Registration = '" + TxtRegistration.Text + "'";
+        }
     }
 }

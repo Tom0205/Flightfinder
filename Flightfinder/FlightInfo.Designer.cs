@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtDeparture = new System.Windows.Forms.TextBox();
+            this.BtnVerwijder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -128,11 +129,22 @@
             this.TxtDeparture.Size = new System.Drawing.Size(100, 22);
             this.TxtDeparture.TabIndex = 11;
             // 
+            // BtnVerwijder
+            // 
+            this.BtnVerwijder.Location = new System.Drawing.Point(187, 155);
+            this.BtnVerwijder.Name = "BtnVerwijder";
+            this.BtnVerwijder.Size = new System.Drawing.Size(75, 23);
+            this.BtnVerwijder.TabIndex = 21;
+            this.BtnVerwijder.Text = "Verwijder";
+            this.BtnVerwijder.UseVisualStyleBackColor = true;
+            this.BtnVerwijder.Click += new System.EventHandler(this.BtnVerwijder_Click);
+            // 
             // FlightInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 165);
+            this.ClientSize = new System.Drawing.Size(274, 190);
+            this.Controls.Add(this.BtnVerwijder);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtRegistration);
             this.Controls.Add(this.TxtCallsign);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtDeparture;
+        private System.Windows.Forms.Button BtnVerwijder;
     }
 }
