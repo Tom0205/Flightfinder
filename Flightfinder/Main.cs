@@ -20,8 +20,7 @@ namespace Flightfinder
         }
         public DateTime timeframe;
         AddFlight addflightform = new AddFlight();
-        public string ConnectionString;
-        public MySqlConnection connection;
+        Functions Functions = new Functions();
         public string Departure;
         public string Arrival;
         public string Callsign;
@@ -51,17 +50,16 @@ namespace Flightfinder
         {
             //In this function the possible flight will be searched
             LstPossible.Items.Clear();
-            Startup();
-            Openconnection();
+            Functions.Startup();
+            Functions.Openconnection();
             Search();
         }
-        private void Search()
+
+        public void Search()
         {
             TimeSpan flighttime = timeframe.Subtract(DateTime.Now);
             string Searchstring = "SELECT Departure, Arrival, Callsign FROM Flightinfo WHERE Flighttime < '" + flighttime.ToString() + "'";
-            IDbCommand dbCommand = connection.CreateCommand();
-            dbCommand.CommandText = Searchstring;
-            IDataReader reader = dbCommand.ExecuteReader();
+            IDataReader reader = Functions.fGetDbcommand(Searchstring).ExecuteReader();
             while (reader.Read())
             {
                 string Departure = (string)reader["Departure"];
@@ -75,48 +73,9 @@ namespace Flightfinder
             }
             reader.Close();
             reader = null;
-            dbCommand.Dispose();
-            dbCommand = null;
+            Functions.fGetDbcommand(Searchstring).Dispose();
         }   
-        public void Startup()
-        {
-            string server = "db4free.net";
-            string database = "flightfinder";
-            string uid = "tom0205";
-            string password = "Tom02052001";
-
-            ConnectionString = "SERVER=" + server + "; DATABASE=" + database + "; UID=" + uid + "; PASSWORD=" + password + "; old guids=true; CharSet=utf8;";
-            connection = new MySqlConnection(ConnectionString);
-        }
-        public bool Openconnection()
-        {
-            //open connectie
-            try
-            {
-                connection.Open();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-        }
-        public bool Closeconnection()
-        {
-            //close connectie
-            try
-            {
-                connection.Close();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-        }
-
+        
         private void LstPossible_DoubleClick(object sender, EventArgs e)
         {
             FlightInfo Flightinfo = new FlightInfo(this);
@@ -127,9 +86,7 @@ namespace Flightfinder
             Arrival = Selectedflightstring[1];
             Callsign = Selectedflightstring[2];
             string Searchstring = "SELECT Flighttime, Registration FROM Flightinfo WHERE Departure = '" + Departure + "' AND Arrival = '" + Arrival+ "' AND Callsign = '" + Callsign+ "'";
-            IDbCommand dbCommand = connection.CreateCommand();
-            dbCommand.CommandText = Searchstring;
-            IDataReader reader = dbCommand.ExecuteReader();
+            IDataReader reader = Functions.fGetDbcommand(Searchstring).ExecuteReader();
             while (reader.Read())
             {
                 Flighttime = reader["Flighttime"].ToString();
@@ -137,8 +94,7 @@ namespace Flightfinder
             }
             reader.Close();
             reader = null;
-            dbCommand.Dispose();
-            dbCommand = null;
+            Functions.fGetDbcommand(Searchstring).Dispose();
             Flightinfo.Show();
         }
     }
