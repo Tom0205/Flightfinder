@@ -41,6 +41,11 @@ namespace Flightfinder
             Closeconnection();
         }
 
+        public void Startscreen()
+        {
+            Application.Run(new LoadingScreen());
+        }
+
         public void Startup()
         {
             string server = "db4free.net";

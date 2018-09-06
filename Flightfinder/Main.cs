@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySql.Data;
+using System.Threading;
 
 namespace Flightfinder
 {
@@ -16,7 +17,11 @@ namespace Flightfinder
     {
         public Main()
         {
+            Thread t = new Thread(new ThreadStart(Functions.Startscreen));
+            t.Start();
+            Thread.Sleep(5000);
             InitializeComponent();
+            t.Abort();    
         }
         public DateTime timeframe;
         AddFlight addflightform = new AddFlight();
@@ -96,6 +101,6 @@ namespace Flightfinder
             reader = null;
             Functions.fGetDbcommand(Searchstring).Dispose();
             Flightinfo.Show();
-        }
+        } 
     }
 }
