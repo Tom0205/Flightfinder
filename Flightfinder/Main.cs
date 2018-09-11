@@ -13,7 +13,7 @@ using System.Threading;
 
 namespace Flightfinder
 {
-    public partial class Main : Form
+    public partial class Main : MetroFramework.Forms.MetroForm
     {
         public Main()
         {
@@ -55,9 +55,17 @@ namespace Flightfinder
         {
             //In this function the possible flight will be searched
             LstPossible.Items.Clear();
-            Functions.Startup();
-            Functions.Openconnection();
-            Search();
+            try
+            {
+                Functions.Startup();
+                Functions.Openconnection();
+                Search();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Sorry, the Database is offline");
+                throw;
+            }     
         }
 
         public void Search()
@@ -101,6 +109,6 @@ namespace Flightfinder
             reader = null;
             Functions.fGetDbcommand(Searchstring).Dispose();
             Flightinfo.Show();
-        } 
+        }
     }
 }

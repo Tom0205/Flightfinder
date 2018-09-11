@@ -12,7 +12,7 @@ using MySql.Data;
 
 namespace Flightfinder
 {
-    public partial class FlightInfo : Form
+    public partial class FlightInfo : MetroFramework.Forms.MetroForm
     {
         public FlightInfo(Main incomingform)
         {

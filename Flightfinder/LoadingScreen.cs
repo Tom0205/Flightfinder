@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Flightfinder
 {
-    public partial class LoadingScreen : Form
+    public partial class LoadingScreen : MetroFramework.Forms.MetroForm
     {
         public LoadingScreen()
         {

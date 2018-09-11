@@ -37,8 +37,8 @@
             // 
             // BtnFlight
             // 
-            this.BtnFlight.Location = new System.Drawing.Point(154, 10);
-            this.BtnFlight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnFlight.Location = new System.Drawing.Point(157, 33);
+            this.BtnFlight.Margin = new System.Windows.Forms.Padding(2);
             this.BtnFlight.Name = "BtnFlight";
             this.BtnFlight.Size = new System.Drawing.Size(80, 19);
             this.BtnFlight.TabIndex = 0;
@@ -48,8 +48,8 @@
             // 
             // BtnTime
             // 
-            this.BtnTime.Location = new System.Drawing.Point(9, 10);
-            this.BtnTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTime.Location = new System.Drawing.Point(22, 33);
+            this.BtnTime.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTime.Name = "BtnTime";
             this.BtnTime.Size = new System.Drawing.Size(80, 19);
             this.BtnTime.TabIndex = 1;
@@ -60,17 +60,17 @@
             // LstPossible
             // 
             this.LstPossible.FormattingEnabled = true;
-            this.LstPossible.Location = new System.Drawing.Point(9, 33);
-            this.LstPossible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LstPossible.Location = new System.Drawing.Point(22, 65);
+            this.LstPossible.Margin = new System.Windows.Forms.Padding(2);
             this.LstPossible.Name = "LstPossible";
-            this.LstPossible.Size = new System.Drawing.Size(225, 277);
+            this.LstPossible.Size = new System.Drawing.Size(215, 277);
             this.LstPossible.TabIndex = 2;
             this.LstPossible.DoubleClick += new System.EventHandler(this.LstPossible_DoubleClick);
             // 
             // LblTimeframe
             // 
             this.LblTimeframe.AutoSize = true;
-            this.LblTimeframe.Location = new System.Drawing.Point(7, 312);
+            this.LblTimeframe.Location = new System.Drawing.Point(22, 351);
             this.LblTimeframe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTimeframe.Name = "LblTimeframe";
             this.LblTimeframe.Size = new System.Drawing.Size(112, 13);
@@ -81,15 +81,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 342);
+            this.ClientSize = new System.Drawing.Size(259, 374);
             this.Controls.Add(this.LblTimeframe);
             this.Controls.Add(this.LstPossible);
             this.Controls.Add(this.BtnTime);
             this.Controls.Add(this.BtnFlight);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
-            this.Text = "Main";
             this.ResumeLayout(false);
             this.PerformLayout();
 

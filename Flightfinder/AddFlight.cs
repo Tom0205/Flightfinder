@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace Flightfinder
 {
-    public partial class AddFlight : Form
+    public partial class AddFlight : MetroFramework.Forms.MetroForm
     {
         public AddFlight()
         {

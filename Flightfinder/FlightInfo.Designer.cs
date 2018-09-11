@@ -45,7 +45,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 81);
+            this.label5.Location = new System.Drawing.Point(13, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
@@ -55,7 +55,7 @@
             // TxtRegistration
             // 
             this.TxtRegistration.Enabled = false;
-            this.TxtRegistration.Location = new System.Drawing.Point(81, 79);
+            this.TxtRegistration.Location = new System.Drawing.Point(81, 130);
             this.TxtRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.TxtRegistration.Name = "TxtRegistration";
             this.TxtRegistration.Size = new System.Drawing.Size(76, 20);
@@ -64,7 +64,7 @@
             // TxtCallsign
             // 
             this.TxtCallsign.Enabled = false;
-            this.TxtCallsign.Location = new System.Drawing.Point(81, 56);
+            this.TxtCallsign.Location = new System.Drawing.Point(81, 107);
             this.TxtCallsign.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCallsign.Name = "TxtCallsign";
             this.TxtCallsign.Size = new System.Drawing.Size(76, 20);
@@ -73,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 58);
+            this.label4.Location = new System.Drawing.Point(13, 110);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 106);
+            this.label3.Location = new System.Drawing.Point(13, 158);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
@@ -93,7 +93,7 @@
             // TxtArrival
             // 
             this.TxtArrival.Enabled = false;
-            this.TxtArrival.Location = new System.Drawing.Point(81, 33);
+            this.TxtArrival.Location = new System.Drawing.Point(81, 84);
             this.TxtArrival.Margin = new System.Windows.Forms.Padding(2);
             this.TxtArrival.Name = "TxtArrival";
             this.TxtArrival.Size = new System.Drawing.Size(76, 20);
@@ -104,7 +104,7 @@
             this.DtpFlighttime.CustomFormat = "00:00";
             this.DtpFlighttime.Enabled = false;
             this.DtpFlighttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpFlighttime.Location = new System.Drawing.Point(81, 102);
+            this.DtpFlighttime.Location = new System.Drawing.Point(81, 153);
             this.DtpFlighttime.Margin = new System.Windows.Forms.Padding(2);
             this.DtpFlighttime.Name = "DtpFlighttime";
             this.DtpFlighttime.ShowUpDown = true;
@@ -114,7 +114,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 36);
+            this.label2.Location = new System.Drawing.Point(13, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
@@ -124,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(13, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
@@ -134,7 +134,7 @@
             // TxtDeparture
             // 
             this.TxtDeparture.Enabled = false;
-            this.TxtDeparture.Location = new System.Drawing.Point(81, 11);
+            this.TxtDeparture.Location = new System.Drawing.Point(81, 62);
             this.TxtDeparture.Margin = new System.Windows.Forms.Padding(2);
             this.TxtDeparture.Name = "TxtDeparture";
             this.TxtDeparture.Size = new System.Drawing.Size(76, 20);
@@ -142,7 +142,7 @@
             // 
             // BtnVerwijder
             // 
-            this.BtnVerwijder.Location = new System.Drawing.Point(134, 126);
+            this.BtnVerwijder.Location = new System.Drawing.Point(95, 177);
             this.BtnVerwijder.Margin = new System.Windows.Forms.Padding(2);
             this.BtnVerwijder.Name = "BtnVerwijder";
             this.BtnVerwijder.Size = new System.Drawing.Size(62, 19);
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(206, 154);
+            this.ClientSize = new System.Drawing.Size(171, 206);
             this.Controls.Add(this.BtnVerwijder);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtRegistration);

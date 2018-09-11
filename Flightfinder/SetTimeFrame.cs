@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Flightfinder
 {
-    public partial class SetTimeFrame : Form
+    public partial class SetTimeFrame : MetroFramework.Forms.MetroForm
     { 
         public SetTimeFrame(Main incomingForm)
         {
